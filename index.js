@@ -12,7 +12,7 @@ function ghci(message, expression) {
       if (error) {
         message.reply(error.toString());
       } else {
-        message.reply(`Expresión evaluada:\n\`\`\`haskell\n ${stderr || rta}\`\`\``);
+        message.reply(`Expresión evaluada:\n\`\`\`haskell\n ${stderr.trim() || rta}\`\`\``);
       }
     });
 }
