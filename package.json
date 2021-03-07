@@ -12,10 +12,7 @@
     "dependencies": {
         "child_process": "^1.0.2",
         "discord.js": "^12.1.1",
-        "dotenv": "^8.2.0",
-        "lodash": "^4.17.15",
-        "mongodb": "^3.5.5",
-        "mongoose": "^5.9.6"
+        "dotenv": "^8.2.0"
     },
     "devDependencies": {
         "nodemon": "^2.0.2"
