@@ -1,6 +1,5 @@
 const Discord = require('discord.js');
 const exec = require('child_process');
-require('dotenv').config()
 
 const client = new Discord.Client();
 
