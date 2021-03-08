@@ -1,0 +1,21 @@
+services:
+  haskell:
+    command: sleep infinity
+    container_name: haskell
+    env_file: .env
+    image: haskell:7
+    volumes:
+      - ./docker/prettify.hs:/prettify.hs:ro
+  node:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: discord_ghci_bot
+    depends_on:
+      - haskell
+    env_file: .env
+    image: ghci-bot:v1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+
+version: '3.9'
