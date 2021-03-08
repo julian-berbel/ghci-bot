@@ -1,6 +1,6 @@
-FROM node:14.16.0
+FROM node:14.16.0-alpine
 
-RUN wget -qO- https://get.docker.com/ | sh
+COPY --from=docker:20.10.4 /usr/local/bin/docker /usr/local/bin/
 
 WORKDIR /home/node/app
 
