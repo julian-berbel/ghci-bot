@@ -2,7 +2,6 @@ services:
   haskell:
     command: sleep infinity
     container_name: haskell
-    env_file: .env
     image: haskell:7
     volumes:
       - ./docker/prettify.hs:/prettify.hs:ro
