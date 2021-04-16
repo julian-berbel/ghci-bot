@@ -11,7 +11,7 @@ function ghci(message, expression) {
       if (error) {
         message.reply(error.toString());
       } else {
-        message.reply(`Expresión evaluada:\n\`\`\`haskell\n ${stderr.trim() || rta}\`\`\``);
+        message.reply(`Expresión evaluada:\n\`\`\`haskell\n*Main> ${expression}\n${stderr.trim() || rta.replace(/\*Main> /, '')}\`\`\``);
       }
     });
 }
