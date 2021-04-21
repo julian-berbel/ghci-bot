@@ -2,7 +2,7 @@ services:
   haskell:
     command: sleep infinity
     container_name: haskell
-    image: haskell:7
+    image: haskell:8
     network_mode: none
     volumes:
       - ./docker/prettify.hs:/prettify.hs:ro
