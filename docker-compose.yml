@@ -7,7 +7,10 @@ services:
     read_only: true
     volumes:
       - ./docker/prettify.hs:/prettify.hs:ro
-      - tmp:/tmp
+      - type: tmpfs
+        target: /tmp
+        tmpfs:
+          size: 1k
   node:
     build:
       context: .
@@ -21,6 +24,3 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
 version: '3.9'
-
-volumes:
-  tmp:
